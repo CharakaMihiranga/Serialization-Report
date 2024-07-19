@@ -53,17 +53,18 @@ public class Main {
 
     public static void serialization(User user) {
 
+        System.out.println("\n=========================================\n");
+
+        System.out.println(
+                "========User========\n"+
+                        "Username: "+ user.getName()+"\n"+
+                        "Email: "+ user.getEmail()+"\n"+
+                        "Password: "+ user.getPassword()+"\n"
+        );
 
         try {
 
-            System.out.println("\n=========================================\n");
 
-            System.out.println(
-                    "========User========\n"+
-                    "Username: "+ user.getName()+"\n"+
-                    "Email: "+ user.getEmail()+"\n"+
-                    "Password: "+ user.getPassword()+"\n"
-            );
 
             FileOutputStream fileOut = new FileOutputStream("user.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
