@@ -97,7 +97,7 @@ public class Main {
             c.printStackTrace();
         }
         long serialVersionUID = ObjectStreamClass.lookup(User.class).getSerialVersionUID();
-        System.out.println("SerialVersionUID in deserialization method: " + serialVersionUID)
+        System.out.println("SerialVersionUID in deserialization method: " + serialVersionUID);
         System.out.println("\n=========================================\n");
         return user;
     }
