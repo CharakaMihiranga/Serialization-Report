@@ -52,20 +52,14 @@ public class Main {
 
 
     public static void serialization(User user) {
-
         System.out.println("\n=========================================\n");
-
         System.out.println(
                 "========User========\n"+
                         "Username: "+ user.getName()+"\n"+
                         "Email: "+ user.getEmail()+"\n"+
                         "Password: "+ user.getPassword()+"\n"
         );
-
         try {
-
-
-
             FileOutputStream fileOut = new FileOutputStream("user.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
 
@@ -85,7 +79,6 @@ public class Main {
         System.out.println("\n=========================================\n");
 
     }
-
     public static User deserialization() {
         User user = null;
         try {
@@ -103,15 +96,11 @@ public class Main {
             System.out.println("User class not found");
             c.printStackTrace();
         }
-
         long serialVersionUID = ObjectStreamClass.lookup(User.class).getSerialVersionUID();
-        System.out.println("SerialVersionUID in deserialization method: " + serialVersionUID);
-
+        System.out.println("SerialVersionUID in deserialization method: " + serialVersionUID)
         System.out.println("\n=========================================\n");
-
         return user;
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -128,17 +117,13 @@ public class Main {
                 password
         );
 
-
         serialization(user);
         User deserializedUser = deserialization();
-
-
         System.out.println(
                 "========Deserialized User========\n"+
                 "Username: "+ deserializedUser.getName()+"\n"+
                 "Email: "+ deserializedUser.getEmail()+"\n"+
                 "Password: "+ deserializedUser.getPassword()
         );
-
     }
 }
